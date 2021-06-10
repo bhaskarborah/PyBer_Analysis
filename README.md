@@ -1,130 +1,43 @@
-# Module 4 Challenge - School District Analysis
+# Module 5 Challenge - PyBer Analysis
 
 ## Overview of Project
 
-Maria is a Data Scientist for the City School District. She is responsible for analyzing various types of data and producing performance trends and patterns. This information enables to take decisions in school and district level regarding budgets and priorities.
-The project is required to assist Maria in analyzing data - student, funding and standardized test scores, create the required dataframes/reports which showcase school and student performance and trends. The results would be used for making decisions in school budget and priority.
+PyBer, a ride-sharing app company valued at $2.3 billion. V. Isualize is the CEO of the company, and wants a comprehensive summary of the ride-sharing data by city type.
+This report should have the total weekly fares for each city type. It should also have a visual representation of the total fare per city of a weekly basis.
+This analysis and the conclusions of this report would be used by decision-makers in PyBer. 
 
 
 ### Purpose
 
-The purpose of this project is to analyze, filter the input data and create the required student, funding and grade data for Maria.
-The student information has been provided in the comma separated value file: students_complete.csv
-The school board has notified Maria and her supervisor that the students_complete.csv file shows evidence of academic dishonesty; specifically, reading and math grades for Thomas High School ninth graders appear to have been altered. 
-Although the school board does not know the full extent of the academic dishonesty, they want to uphold state-testing standards and have turned to Maria for help. 
-We have to assist Maria to replace the math and reading scores for Thomas High School with NaNs while keeping the rest of the data intact. Once we have replaced the math and reading scores, Maria would like us to create the school district analysis using the revised data.
-Finally we have to write up a report to describe how these changes affected the overall analysis.
-
-The district analysis should contain the below information:
-
-1. District level summary of all schools with the school count, total students, total budget, Average Math Score, Average Reading Score, % Passing Math, % Passing Reading, % Overall Passing
-2. School level report with School Type, Total Students, Total School Budget, Per Student Budget, Average Math Score, Average Reading Score, % Passing Math, % Passing Reading, % Overall Passing
-3. Math Grades for grades - 9th, 10th, 11th and 12th
-4. Reading Grades for grades - 9th, 10th, 11th and 12th
-5. Update the school level report with the field - Spending Ranges (Per Student) - which has the spending ranges per student for each school
-6. Update the school level report with the field - School Size - which has the categories according to the number of students in the school
-7. Create dataframe for Spending Summary
-8. Create dataframe for School Size Summary
-9. Create dataframe for School Size Summary
+The purpose of this project is to analyze and create the required report for the CEO of PyBer.
+This report should contain:
+1. A ride-sharing summary DataFrame by city type
+2. A multiple-line chart of total fares for each city type
+3. A written report for the PyBer analysis. This report should contain the three business recommendations to the CEO to address the disparities among the city types.
 
 
+# PyBer Analysis Results
 
-# School-District-Analysis Results
+Below is the summary results that have been generated for the three city types - Rural, Suburban and Urban respectively.
 
-How is the district summary affected?
-How is the school summary affected?
-How does replacing the ninth graders’ math and reading scores affect Thomas High School’s performance relative to the other schools?
-How does replacing the ninth-grade scores affect the following:
-Math and reading scores by grade
-Scores by school spending
-Scores by school size
-Scores by school type
+![Screen Shot 2021-06-10 at 12.53.25 PM](https://i.imgur.com/uGk7O40.png)
 
-(1) How is the district summary affected?
+The city type wise analysis is as below:
+1. Rural - The number of rides in rural is less when compared to suburban and urban. The rides to driver ratio is 125/78 which is 1.6. The number of drivers is less when compared to the rides, but the rides themselves are less in number. Also the Average Fare Per Ride and Average Fare Per Driver is higher than Suburban and Urban areas. 
 
-Below is the district summary which has the Thomas High School ninth graders details:
-![Screen Shot 2021-06-03 at 9.23.09 AM](https://i.imgur.com/fPXELe8.png)
+2. Suburban - The number of rides in suburban is less when compared to urban but more than rural. The rides to driver ratio is 625/490 which is 1.28. The total fares is much more than rural but less than half of urban. Also the Average Fare Per Ride and Average Fare Per Driver is high.
 
-Below is the district summary which does not have the Thomas High School ninth graders details:
-![Screen Shot 2021-06-03 at 9.25.40 AM](https://i.imgur.com/XKrLc6v.png)
+3. Urban - The number of rides is highest among all the city types. The rides to driver ratio is 1625/2405 which is 0.68. The demand of rides is high and the Average Fare Per Ride and Average Fare Per Driver is the lowest among the three city types
 
-The % Passing Math, % Passing Reading, and % Overall Passing values have come slightly down once the Thomas High School ninth graders details have been removed
+These results are represented in the multiple-line chart as well
+![Screen Shot 2021-06-10 at 1.07.48 PM](https://i.imgur.com/Otg1AlE.png)
 
-(2) How is the school summary affected?
+# PyBer Analysis Summary
 
- Below is the school summary which has the Thomas High School ninth graders details:
-![Screen Shot 2021-06-03 at 9.33.19 AM](https://i.imgur.com/eARZHoZ.png)
+The below recommendations can be derived from the PyBer analysis:
 
-Below is the school summary which does not have the Thomas High School ninth graders details:
-![Screen Shot 2021-06-03 at 9.35.40 AM](https://i.imgur.com/Ibi1a8e.png)
+Urban - The total number of rides is the highest in this category, however the number of drivers is also large as is evident from the rides to driver ratio. It would be beneficial if the number of rides in this area can be increased, so that the ratio improves and the total fares can be increased. 
 
-The % Passing Math, % Passing Reading, and % Overall Passing values for Thomas High School have come down. This has come down as we are calculating the percentages for Thomas High School students, still considering the Grade 9 students in the total.
+Suburban - It would be feasible to increase the number of rides in this category to improve the ride to driver ratio. This would drive up the total fares, and also provide a better average fare per ride and driver.
 
-Once we calculate the Thomas High School details considering only students from Grades 10th-12th, below are the details:
-![Screen Shot 2021-06-03 at 9.50.36 AM](https://i.imgur.com/j5Anr3P.png)
-
-(3)  How does replacing the ninth graders’ math and reading scores affect Thomas High School’s performance relative to the other schools?
-
-Replacing the ninth grader's math and reading scores puts Thomas High School in the high performing school group on the basis of % Overall Passing.
-
-Below is the screen shot for the top five schools:
-
-![Screen Shot 2021-06-03 at 9.53.46 AM](https://i.imgur.com/o6FvuKf.png)
-
-
-
-
-(4) How does replacing the ninth-grade scores affect the following:
-
-(a) Math and reading scores by grade
-
-Math and reading scores by grade will not have 9th grade details for Thomas High School:
-
-Math Score Screen shot:
-![Screen Shot 2021-06-03 at 9.59.57 AM](https://i.imgur.com/3etk7uR.png)
-
-Reading Score Screen shot:
-![Screen Shot 2021-06-03 at 10.01.28 AM](https://i.imgur.com/uuCWdXH.png)
-
-(b) Scores by school spending
-
-The school spending before replacing:
-![Screen Shot 2021-06-03 at 10.04.47 AM](https://i.imgur.com/Ej9YOe1.png)
-
-The school spending after replacing:
-![Screen Shot 2021-06-03 at 10.07.16 AM](https://i.imgur.com/jcIjuuA.png)
-
-The Spending Ranges for Bailey High School has changed from $585-629 to $630-644
-The Spending Ranges for Griffin High School has changed from $585-629 to $630-644
-
-(c) Scores by school size
-
-The school sizes do not see any size before and after replacing
-![Screen Shot 2021-06-03 at 10.17.55 AM](https://i.imgur.com/dvfoOiy.png)
-
-
-(d) Scores by school type
-Scores by school type do not see any size before and after replacing
-![Screen Shot 2021-06-03 at 10.19.19 AM](https://i.imgur.com/82cxzXE.png)
-
-
-# School-District-Analysis Summary
-
-Below are the changes changes in the updated school district analysis after reading and math scores for the ninth grade at Thomas High School have been replaced with NaNs:
-
-(a) District Summary:  The % Passing Math, % Passing Reading, and % Overall Passing values have come slightly down once the Thomas High School ninth graders details have been removed
-
-(b) School Summary: The % Passing Math, % Passing Reading, and % Overall Passing values for Thomas High School have come down. However once they are recalculated considering only students from Grades 10th-12th, the percentages get updated, and puts Thomas High School in the high performing school group on the basis of % Overall Passing.
-
-(c) Math and reading scores by grade: The 9th grades details are updated as NaN.
-
-(d) Scores by School Spending: 
-The Spending Ranges for Bailey High School has changed from bucket (585-629) to (630-649)
-The Spending Ranges for Griffin High School has changed from bucket (585-629) to (630-649)
-
-
-
-
-
-
-
+Rural - This category has the highest profit but the number of rides is very less. It would be beneficial if the number of rides in rural can be increased by providing some offers or some discounts to the customers as the profit margin is high in this category. The total rides need to increase and also the total drivers can be increased here. 
